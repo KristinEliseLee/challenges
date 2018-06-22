@@ -2,15 +2,15 @@
 
 Return the set of nums that are the mode::
 
-    >>> mode([1]) == {1}
+    >>> find_mode([1]) == {1}
     True
 
-    >>> mode([1, 2, 2, 2]) == {2}
+    >>> find_mode([1, 2, 2, 2]) == {2}
     True
 
 If there is a tie, return all::
 
-    >>> mode([1, 1, 2, 2]) == {1, 2}
+    >>> find_mode([1, 1, 2, 2]) == {1, 2}
     True
 """
 
@@ -18,7 +18,7 @@ If there is a tie, return all::
 def find_mode(nums):
     """Find the most frequent num(s) in nums."""
     count = {}
-    modes = {}
+    modes = set()
     for i in nums:
         if i in count:
             count[i] += 1
@@ -30,11 +30,10 @@ def find_mode(nums):
             most_appearances = count[x]
     for n in count:
         if count[n] == most_appearances:
+            
             modes.add(n)
+
     return modes
-
-
-
 
 
 if __name__ == '__main__':

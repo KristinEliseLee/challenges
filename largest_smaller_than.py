@@ -14,7 +14,7 @@ For example:
 Never find xnumber --- it's not smaller than itself!
 
     >>> find_largest_smaller_than([-5, -2, 8, 12, 32], 8)
-    2
+    1
 
 If no such number exists, return None:
 
@@ -30,15 +30,15 @@ def find_largest_smaller_than(nums, xnumber):
 
     for i in range(len(nums)):
         if nums[i] < xnumber:
-            if answer == None:
+            if answer is None:
                 answer = i
             elif nums[answer] < nums[i]:
                 answer = i
 
     return answer
 
+
 if __name__ == '__main__':
     import doctest
     if doctest.testmod().failed == 0:
         print ("\n*** ALL TESTS PASSED. YOU ARE THE MAXIMUM!\n")
-

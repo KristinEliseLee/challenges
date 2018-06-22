@@ -19,7 +19,7 @@ Uppercase and lowercase letters should be considered separately::
 
 
 def has_unique_chars(word):
-    """Does word contains unique set of characters?"""
+    """Does word contains any unique characters? Returns True or False"""
 
     for i in range(len(word)-1):
         if word[i] in word[i+1:]:

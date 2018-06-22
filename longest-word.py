@@ -12,13 +12,13 @@ For example::
 
 
 def find_longest_word(words):
-    """Return longest word in list of words."""
+    """Return length of longest word in list of words."""
     longest = ""
     for word in words:
         if len(word) > len(longest):
             longest = word
 
-    return longest
+    return len(longest)
 
 
 if __name__ == '__main__':

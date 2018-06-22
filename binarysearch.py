@@ -37,8 +37,10 @@ def binary_search(val):
             low = guess
         else:
             high = guess
-        guess = high + low // 2
+
+        guess = (high + low) // 2
         num_guesses += 1
+
     return num_guesses
 
 

@@ -26,6 +26,7 @@ is a prime number:
     >>> is_prime(999)
     False
 """
+import math
 
 
 def is_prime(num):
@@ -38,6 +39,7 @@ def is_prime(num):
         if num % i == 0:
             return False
     return True
+
 
 if __name__ == '__main__':
     import doctest

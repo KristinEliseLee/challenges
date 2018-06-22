@@ -7,7 +7,7 @@ For example::
 
     >>> for i in range(1, 13):
     ...     date = str(i) + " 2016"
-    ...     print "%s has %s days." % (date, days_in_month(date))
+    ...     print ("%s has %s days." % (date, days_in_month(date)))
     1 2016 has 31 days.
     2 2016 has 29 days.
     3 2016 has 31 days.
@@ -56,15 +56,17 @@ def is_leap_year(year):
 
 
 def days_in_month(date):
-    """How many days are there in a month?"""
+    """returns number of days for date in (month) (year) format"""
     date_list = date.split()
-    month_list_31 = ["01", "03", "05", "07", "08", "10", "12"]
-    if date_list[1] in month_list_31:
+
+    month_list_31 = [1, 3, 5, 7, 8, 10, 12]
+
+    if int(date_list[0]) in month_list_31:
         return 31
-    elif date_list[1] != "02":
+    elif int(date_list[0]) != 2:
         return 30
     else:
-        if is_leap_year(int(date_list[2])):
+        if is_leap_year(int(date_list[1])):
             return 29
         else:
             return 28

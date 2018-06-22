@@ -32,9 +32,8 @@ def is_palindrome(word):
     return True
 
 
-
 if __name__ == '__main__':
     import doctest
 
     if doctest.testmod().failed == 0:
-        print( "\n*** ALL TESTS PASSED. YAY!")
+        print("\n*** ALL TESTS PASSED. YAY!")

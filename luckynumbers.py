@@ -34,7 +34,6 @@ def lucky_numbers(n):
     return lucky_nums
 
 
-
 if __name__ == '__main__':
     import doctest
     if doctest.testmod().failed == 0:

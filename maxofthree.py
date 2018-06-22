@@ -30,7 +30,6 @@ def max_of_three(num1, num2, num3):
     return biggest
 
 
-
 if __name__ == '__main__':
     import doctest
 

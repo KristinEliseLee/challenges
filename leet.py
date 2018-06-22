@@ -13,7 +13,7 @@ For example::
 
 def translate_leet(phrase):
     """Translates input into "leet-speak"."""
-    changes = { "a":"@", "o": "0", "e": "3", "l": "1", "s": "5", "t": "7"}
+    changes = {"a": "@", "o": "0", "e": "3", "l": "1", "s": "5", "t": "7"}
     word = ""
 
     for i in phrase:
@@ -23,7 +23,6 @@ def translate_leet(phrase):
             word += i
 
     return word
-
 
 
 if __name__ == '__main__':

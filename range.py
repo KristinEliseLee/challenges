@@ -36,7 +36,6 @@ def find_range(nums):
     return min, max
 
 
-
 if __name__ == '__main__':
     import doctest
 

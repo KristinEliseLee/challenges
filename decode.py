@@ -25,7 +25,7 @@ Longer patterns should work::
 
 
 def decode(s):
-    """Decode a string."""
+    """Decode a string based on specific decoding pattern"""
 
     word = ""
     i = 0
